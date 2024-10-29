@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #e0b2d6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.Calculadora {
+  background-color: coral;
+  color: #333;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 360px;
+  padding: 2rem;
+  border-radius: 2.5rem;
+  gap: 0.8rem;
+  position: relative;
+}
+
+.Vista {
+  grid-column: 1 / -1;
+  background-color: #e8eff5;
+  padding: 1.2rem;
+  font-size: 2.5rem;
+  text-align: right;
+  border-radius: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.boton {
+  background-color: #a3a3a3;
+  color: #333;
+  border: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: #575fcf;
+  color: white;
+}
+
+#cero {
+  grid-column: span 2;
+}
+
+#igual {
+  grid-row: span 2;
+  background-color: #d16037;
+  color: white;
+}
+
+#igual:hover {
+  background-color: #240d7f;
+}
+
+.Historial {
+  grid-column: 1 / -1;
+  background-color: #e8eff5;
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+}
+
+.Historial h3 {
+  color: #333;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Historial ul {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.Historial ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+.Historial ul::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
+}
+
+.Historial ul::-webkit-scrollbar-thumb {
+  background: #d16037;
+  border-radius: 3px;
+}
+
+.Historial li {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px;
+}
+
+.Historial li:hover {
+  background-color: white;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 400px) {
+  .Calculadora {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  
+  .boton {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  
+  .Vista {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  
+  .Historial {
+    padding: 1rem;
+  }
+  
+  .Historial li {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
